@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Question 8</title>
+  <style>
+    * {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #main-title {
+      text-align: center;
+      background-color: #007acc;
+      color: white;
+      padding: 15px;
+    }
+    .highlight {
+      color: #e67e22;
+      font-weight: bold;
+    }
+    div p {
+      margin: 10px 0;
+      color: #333;
+    }
+    h2, h3 {
+      color: #2c3e50;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    .box {
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 8px;
+    }
+    p a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-title">CSS Selector Demonstration</h1>
+  <div class="box">
+    <h2>Class Selector</h2>
+    <p>This is a paragraph with a <span class="highlight">highlighted text</span> using a class selector.</p>
+  </div>
+  <div class="box">
+    <h3>Descendant Selector</h3>
+    <p>The text inside this <code>div</code> is styled because of the <strong>descendant selector</strong>.</p>
+    <p>Here's a <a href="#">link</a> styled using a descendant selector.</p>
+  </div>
+  <div class="box">
+    <h3>Group & Universal Selectors</h3>
+    <p>Group selectors allow styling multiple elements like <code>h2, h3</code> together.</p>
+    <p>The universal selector <code>*</code> sets default styles for all elements (like font and margins).</p>
+  </div>
+</body>
+</html>

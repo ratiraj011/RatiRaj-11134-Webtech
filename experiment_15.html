@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation</title>
+</head>
+<body>
+
+<h2 id="title">Welcome</h2>
+<p class="text">This is a paragraph.</p>
+
+<button onclick="changeContent()">Click Me</button>
+
+<script>
+function changeContent() {
+
+    // Using getElementById()
+    let heading = document.getElementById("title");
+
+    // Using querySelector()
+    let para = document.querySelector(".text");
+
+    // Using innerHTML
+    heading.innerHTML = "DOM Updated!";
+    para.innerHTML = "The content has been changed using JavaScript.";
+}
+</script>
+
+</body>
+</html>

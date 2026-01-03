@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Show Hide Demo</title>
+
+<style>
+.box{
+    width: 250px;
+    padding: 15px;
+    background: lightblue;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.hide{
+    display: none;
+}
+.dark{
+    background: #222;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<h2 id="title">Click Button to Toggle</h2>
+
+<button onclick="toggleBox()">Show / Hide Box</button>
+<button onclick="toggleTheme()">Toggle Theme</button>
+
+<div id="myBox" class="box">
+    This is a content box.
+</div>
+
+<script>
+function toggleBox(){
+    document.getElementById("myBox").classList.toggle("hide");
+}
+
+function toggleTheme(){
+    document.getElementById("title").classList.toggle("dark");
+}
+</script>
+
+</body>
+</html>

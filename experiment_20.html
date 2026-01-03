@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rati Raj | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif;}
+html{scroll-behavior:smooth;}
+
+/* ---------- BLACK BACKGROUND ---------- */
+body{
+background:radial-gradient(circle at top, #1a1a1a, #050505, #000000);
+background-size:200% 200%;
+animation:bg 20s infinite alternate;
+color:#f5f7ff;
+}
+@keyframes bg{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+
+/* ---------- NAVBAR ---------- */
+nav{
+position:fixed;top:0;width:100%;padding:18px 8%;
+background:rgba(0,0,0,.65);
+backdrop-filter:blur(18px);
+display:flex;justify-content:space-between;align-items:center;
+z-index:1000;border-bottom:1px solid rgba(255,255,255,.06);
+}
+nav h3{color:#ff5fd8;font-weight:600}
+nav a{color:#f5f7ff;margin-left:28px;text-decoration:none;font-size:15px;}
+nav a:hover{color:#00ffd5}
+
+/* ---------- SECTIONS ---------- */
+section{
+min-height:100vh;padding:120px 8%;
+display:flex;align-items:center;justify-content:center;text-align:center;
+}
+
+/* ---------- HERO ---------- */
+.hero h1{
+font-size:64px;
+background:linear-gradient(90deg,#ff5fd8,#00ffd5,#ff5fd8);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color:transparent;
+}
+.hero p{margin-top:14px;font-size:18px;opacity:.85}
+
+.btn{
+margin-top:35px;
+display:inline-block;
+padding:14px 36px;
+border-radius:40px;
+background:linear-gradient(90deg,#ff5fd8,#00ffd5);
+color:#000;font-weight:500;
+text-decoration:none;
+box-shadow:0 0 30px rgba(255,95,216,.6);
+transition:.4s;
+}
+.btn:hover{transform:scale(1.08)}
+
+/* ---------- HEADINGS ---------- */
+h2{font-size:38px;color:#00ffd5;margin-bottom:30px;}
+
+/* ---------- CARDS ---------- */
+.cards{
+max-width:900px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+margin:auto;
+}
+.card{
+background:rgba(255,255,255,.05);
+border-radius:22px;
+padding:28px;
+backdrop-filter:blur(18px);
+transition:.4s;
+}
+.card:hover{
+transform:translateY(-14px) scale(1.03);
+box-shadow:0 0 45px rgba(0,255,213,.7);
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+background:#050505;
+text-align:center;
+padding:18px;
+opacity:.7;
+}
+
+/* ---------- REVEAL ---------- */
+.reveal{opacity:0;transform:translateY(40px);transition:1s;}
+.reveal.active{opacity:1;transform:none;}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h3>Rati Raj</h3>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+<div>
+<h1>Rati Raj</h1>
+<p>Engineering Student • Web Developer • Tech Enthusiast</p>
+<a href="#projects" class="btn">See My Work</a>
+</div>
+</section>
+
+<section id="about" class="reveal">
+<div>
+<h2>About Me</h2>
+<p>I am a 1st Year BTech Student who love crafting smooth, aesthetic web interfaces and learning modern frontend technologies.</p>
+</div>
+</section>
+
+<section id="skills" class="reveal">
+<div>
+<h2>Skills</h2>
+<div class="cards">
+<div class="card">HTML</div>
+<div class="card">CSS</div>
+<div class="card">JavaScript</div>
+<div class="card">C Language</div>
+<div class="card">Java</div>
+</div>
+</div>
+</section>
+
+<section id="projects" class="reveal">
+<div>
+<h2>Projects</h2>
+<div class="cards">
+<div class="card">Animated Portfolio</div>
+<div class="card">Calculator App</div>
+<div class="card">To-Do Web App</div>
+</div>
+</div>
+</section>
+
+<section id="experience" class="reveal">
+<div>
+<h2>Experience</h2>
+<div class="cards">
+<div class="card">Smart India Hackathon 2025</div>
+<div class="card">Mini Web Projects</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="reveal">
+<div>
+<h2>Contact Me</h2>
+<p>📧 rati.raj@rungta.org</p>
+<p>🔗 linkedin.com/in/rati-raj-74377a375</p>
+</div>
+</section>
+
+<footer>© 2026 Rati Raj</footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+window.addEventListener('scroll',()=>{
+reveals.forEach(r=>{
+if(r.getBoundingClientRect().top<window.innerHeight-120)
+r.classList.add('active');
+});
+});
+</script>
+
+</body>
+</html>

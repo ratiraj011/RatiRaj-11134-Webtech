@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Calculator</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Enter the First Number"));
+        let b = parseInt(prompt("Enter the Second Number"));
+        let op = prompt("Enter the Operator(+,-,*,/,%)");
+        switch(op) {
+            case '+': console.log("Addition= ",a+b);
+            break;
+            case '-': console.log("Subtraction= ",a-b);
+            break;
+            case '*': console.log("Multiplication= ",a*b);
+            break;
+            case '/': console.log("Division= ",a/b);
+            break;
+            case '%': console.log("Modulus= ",a%b);
+            break;
+            default: console.log("Invalid Operator!");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DOM Node Manipulation</title>
+
+<style>
+#list{
+    width: 250px;
+    background: #f2f2f2;
+    padding: 15px;
+    border-radius: 10px;
+}
+button{
+    margin: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Student List</h2>
+
+<ul id="list">
+    <li>Rahul</li>
+    <li>Amit</li>
+</ul>
+
+<button onclick="addStudent()">Add Student</button>
+<button onclick="removeStudent()">Remove Last Student</button>
+<button onclick="modifyStudent()">Modify First Student</button>
+
+<script>
+function addStudent(){
+    let li = document.createElement("li");     // Create element
+    li.innerHTML = "Rati";
+    document.getElementById("list").appendChild(li); // Append child
+}
+
+function removeStudent(){
+    let list = document.getElementById("list");
+    list.removeChild(list.lastElementChild); // Remove child
+}
+
+function modifyStudent(){
+    let list = document.getElementById("list");
+    list.firstElementChild.innerHTML = "Modified Name"; // Modify child
+}
+</script>
+
+</body>
+</html>
